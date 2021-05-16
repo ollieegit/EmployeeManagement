@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="margin">
+        <button class="btn btn-info" type="button" [routerLink]="'/upsert'" name="BtnCreate">+ Create New
+            Employee</button>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Department</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of allemployeeData" class="margin">
+                    <td>{{emp.firstname}}</td>
+                    <td>{{emp.lastname}}</td>
+                    <td>{{emp.department}}</td>
+                    <td> <button class="btn btn-danger" type="button" (click)="DeleteEmployee(emp.id)"
+                            name="BtnDelete">Delete</button>
+                        <button class="btn btn-success " type="button" [routerLink]="['/upsert', emp.id]"
+                            name="BtnUpdate">Update</button>
+                        <button class="btn btn-primary " type="button" [routerLink]="['/display', emp.id]"
+                            name="BtnDetail">Display Info</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

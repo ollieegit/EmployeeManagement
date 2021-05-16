@@ -1,0 +1,19 @@
+/* table{
+    width: 100%;
+    padding-top: 10%;
+} */
+/* th,td{
+    text-align: center;
+}
+tr{
+    border: 2px;
+    border: solid;
+}
+*/
+button{
+    margin-right: 10px;
+} 
+
+thead{
+    background-color: grey;
+}
